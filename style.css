@@ -1,172 +1,145 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eaf4fc;
     margin: 0;
     padding: 0;
-    background-color: plum;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    text-align: center;
 }
-.header, .footer {
-    background-color: palevioletred;
+
+/* ส่วนหัว */
+.header {
+    background-color: #007acc;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    font-size: 14px;
-}
-.container {
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    flex-grow: 1;
-}
-.bank-title {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-.bank-title h1 {
-    font-size: 24px;
-    margin: 0;
-}
-.balance-box {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #fffaf0;
-}
-.error-message {
-    color: red;
+    padding: 10px 40px;
     font-weight: bold;
 }
 
-.history-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-.history-list li {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 2px;
+/* กล่องใหญ่ตรงกลาง */
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    border: 3px solid #007acc;
+    border-radius: 10px;
+    padding: 20px;
 }
 
+/* หัวข้อเว็บ */
+.bank-title h1 {
+    color: #007acc;
+    margin-bottom: 5px;
+}
+
+/* ส่วนต้อนรับ */
 .welcome-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+    background-color: #f2f9ff;
+    border: 2px dashed #007acc;
+    padding: 10px;
+    margin: 10px auto 20px auto;
+    width: 80%;
+    border-radius: 10px;
 }
+
 .welcome-section img {
-    margin-right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
 }
+
+/* กล่องแสดงยอดเงิน */
+.balance-box {
+    border: 2px solid #007acc;
+    background-color: #f8fbff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.history-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+/* ส่วนเนื้อหาหลัก */
 .content-sections {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-top: 30px;
-}
-.account-overview, .financial-tools {
-    width: 50%;
-}
-h2 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
 }
 
+.account-overview, .financial-tools {
+    flex: 1;
+    min-width: 320px;
+    background-color: #f9f9f9;
+    border: 2px solid #007acc;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* หัวข้อแต่ละกล่อง */
 .info-header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-}
-.info-header img {
-    margin-right: 10px; 
-    width: 30px; 
-    height: 30px;
-    flex-shrink: 0;
-}
-.info-header h3 {
-    margin: 0; 
-    flex-grow: 1; 
+    gap: 8px;
+    margin-bottom: 5px;
 }
 
-.info-group {
+.info-header img {
+    width: 24px;
+    height: 24px;
+}
+
+/* การจัดข้อมูล */
+.info-group, .balance-row {
     display: grid;
     grid-template-columns: 150px 1fr;
-    gap: 10px;
-    margin-bottom: 5px; 
-}
-
-.balance-info {
-     margin-top: 20px;
-}
-.balance-info .balance-row {
-    display: grid;
-    grid-template-columns: 150px 100px;
     align-items: center;
-    margin-bottom: 5px;
-    gap: 10px;
-}
-.balance-info .button-container {
-    display: grid;
-    grid-template-columns: 150px 100px;
-    gap: 10px;
-    margin-bottom: 10px;
+    margin: 5px 0;
 }
 
-input[type="text"], input[type="number"], select {
-    padding: 5px;
+.info-group span, .balance-row span {
+    text-align: left;
+    font-weight: 500;
+}
+
+input, select, button {
+    padding: 5px 8px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
 }
-.balance-info input {
-    text-align: right;
-    width: 100px; 
-}
-.currency-converter input {
-    width: 100px;
-    text-align: right;
-}
+
 button {
-    width: 80px; 
-    padding: 6px 0; 
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    background-color: #007bff;
+    background-color: #007acc;
     color: white;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: 0.2s;
 }
+
 button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #005c99;
 }
-.balance-info .button-container button {
-    grid-column: 2 / 3; 
-    width: 80px; 
-    justify-self: start; 
+
+/* ปุ่มใน Balance Info */
+.button-container {
+    text-align: center;
+    margin-top: 10px;
 }
-.bank-operation {
-     margin-top: 20px;
-}
-.bank-operation > div { 
-    display: flex; 
-    align-items: center;
-    margin-top: 10px; 
-}
-.bank-operation input {
-     width: 80px; 
-     margin-left: 10px;
-     text-align: right;
-}
-.bank-operation button, .currency-converter button {
-    margin-left: 10px;
+
+/* ส่วนท้าย */
+.footer {
+    background-color: #007acc;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+    font-weight: bold;
 }
