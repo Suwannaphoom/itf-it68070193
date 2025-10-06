@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: plum;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header, .footer {
+    background-color: palevioletred;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex-grow: 1;
+}
+.bank-title {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.bank-title h1 {
+    font-size: 24px;
+    margin: 0;
+}
+.balance-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fffaf0;
+}
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+.history-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.history-list li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.welcome-section img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+.content-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 30px;
+}
+.account-overview, .financial-tools {
+    width: 50%;
+}
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.info-header img {
+    margin-right: 10px; 
+    width: 30px; 
+    height: 30px;
+    flex-shrink: 0;
+}
+.info-header h3 {
+    margin: 0; 
+    flex-grow: 1; 
+}
+
+.info-group {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    margin-bottom: 5px; 
+}
+
+.balance-info {
+     margin-top: 20px;
+}
+.balance-info .balance-row {
+    display: grid;
+    grid-template-columns: 150px 100px;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 10px;
+}
+.balance-info .button-container {
+    display: grid;
+    grid-template-columns: 150px 100px;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.balance-info input {
+    text-align: right;
+    width: 100px; 
+}
+.currency-converter input {
+    width: 100px;
+    text-align: right;
+}
+button {
+    width: 80px; 
+    padding: 6px 0; 
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.balance-info .button-container button {
+    grid-column: 2 / 3; 
+    width: 80px; 
+    justify-self: start; 
+}
+.bank-operation {
+     margin-top: 20px;
+}
+.bank-operation > div { 
+    display: flex; 
+    align-items: center;
+    margin-top: 10px; 
+}
+.bank-operation input {
+     width: 80px; 
+     margin-left: 10px;
+     text-align: right;
+}
+.bank-operation button, .currency-converter button {
+    margin-left: 10px;
+}

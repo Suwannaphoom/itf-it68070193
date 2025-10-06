@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITF Simple Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <span class="left-header">68070193</span>
+        <span class="center-header">ITF Website</span>
+        <span class="right-header">Week 14</span>
+    </div>
+
+    <div class="container">
+        <div class="bank-title">
+            <h1>ITF Simple Bank</h1>
+        </div>
+
+        <div class="welcome-section">
+            <img src="Picture\Adore.png" alt="Adore Icon" title="Welcome!">
+            <p style="margin: 0;">Welcome to my first HTML + CSS + JS website!</p>
+        </div>
+
+        <div class="balance-box">
+            <p>Current account balance: <strong id="displayAccountBalance">1000</strong>, Current cash balance: <strong id="displayCashBalance">1000</strong></p>
+            
+            <p id="alertMessage" style="margin-top: 10px;"></p>
+
+            <hr style="border: 0; border-top: 1px dashed #ccc; margin: 10px 0;">
+            <p style="font-weight: bold; margin-bottom: 5px;">Transaction History (Last 5):</p>
+            <ul id="transactionHistory" class="history-list">
+            </ul>
+        </div>
+
+        <div class="content-sections">
+            <div class="account-overview">
+                
+                <h2>Account Overview</h2> 
+                
+                <div class="info-header">
+                    <img src="Picture\user.png" alt="User Icon" title="Account Information">
+                    <h3>Account Information</h3>
+                </div>
+                
+                <div class="info-group">
+                    <span>Name:</span> <span>Suwannapgoom Moonmueng</span>
+                </div>
+                <div class="info-group">
+                    <span>Type:</span> <span>Savings Account</span>
+                </div>
+                
+                <div class="balance-info">
+                    <div class="info-header">
+                        <img src="Picture\briefcase.png" alt="Briefcase Icon" title="Balance Information">
+                        <h3>Balance Information</h3>
+                    </div>
+                    
+                    <div class="balance-row">
+                        <span>Current account balance:</span> <input type="number" id="inputAccountBalance" value="1000">
+                    </div>
+                    <div class="balance-row">
+                        <span>Current cash balance:</span> <input type="number" id="inputCashBalance" value="1000">
+                    </div>
+                    
+                    <div class="button-container">
+                        <button onclick="updateBalances()">Change</button>
+                    </div>
+                </div>
+
+                <div class="bank-operation">
+                    <div class="info-header">
+                        <img src="Picture\toolbox.png" alt="Toolbox Icon" title="Bank Operation">
+                        <h3>Bank Operation</h3>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <select id="operationType">
+                            <option value="deposit">Deposit</option>
+                            <option value="withdraw">Withdraw</option>
+                        </select>
+                        <input type="number" id="operationAmount" value="0">
+                        <button onclick="processOperation()">Proceed</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="financial-tools">
+                <h2>Financial Tools</h2>
+
+                <div class="currency-converter">
+                    <div class="info-header">
+                        <img src="Picture\coins.png" alt="Coins Icon" title="Currency Converter">
+                        <h3>Currency Converter</h3>
+                    </div>
+                    
+                    <div class="info-group" style="grid-template-columns: 100px 1fr;">
+                        <span>Input balance:</span> <input type="number" value="0">
+                    </div>
+                    <div class="info-group" style="grid-template-columns: 100px 1fr;">
+                        <span>Output balance:</span> <input type="text" value="0" readonly>
+                    </div>
+                    <div class="info-group" style="grid-template-columns: 100px 1fr;">
+                        <span>Input currency:</span>
+                        <div style="display: flex; align-items: center;">
+                            <select>
+                                <option value="usd">USD</option>
+                                <option value="thb">THB</option>
+                            </select>
+                            <button>Convert</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>ITF SIMPLE BANK EIEI.</span>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
